@@ -1,0 +1,157 @@
+﻿@model Apps.Models.MIS.MIS_ArticleModel
+@using Apps.Common;
+@using Apps.Web.Core;
+@using Apps.Models.Sys;
+@using Apps.Locale;
+@{
+    ViewBag.Title = "创建";
+    Layout = "~/Views/Shared/_Index_LayoutEdit.cshtml";
+    List<permModel> perm = (List<permModel>)ViewBag.Perm;
+
+    if (perm == null)
+    {
+        perm = new List<permModel>();
+    }
+}
+<script src="@Url.Content("~/Scripts/kindeditor/kindeditor-min.js")" type="text/javascript"></script>
+<div class="mvctool bgb">
+    @Html.ToolButton("btnSave", "fa fa-save", Resource.Save, perm, "Save", true)
+    @Html.ToolButton("btnReturn", "fa fa-reply", Resource.Reply, false)
+</div>
+<script type="text/javascript">
+    function setCategory() {
+        $.post("/MIS/Category/GetListByParentId", { id: $("#CategoryName").val() }, function (data) {
+            if (data == "") {
+                $("#CategoryId").html("<option>--没有数据--</option>");
+            }
+            else {
+                $("#CategoryId").html(data);
+            }
+        }, "json");
+    }
+
+    $(function () {
+        setCategory();
+        //加载编辑器
+        var editor = KindEditor.create('textarea[name="BodyContent"]', {
+            resizeType: 1,
+            uploadJson: '/Core/upload_ajax.ashx?action=EditorFile&IsWater=1',
+            fileManagerJson: '/Core/upload_ajax.ashx?action=ManagerFile',
+            allowFileManager: false,
+            items: ['source', 'undo', 'redo', 'wordpaste', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'formatblock', 'fontname', 'fontsize', 'forecolor', 'bold', 'italic', 'table', 'link', 'unlink', 'image', 'fullscreen']
+        });
+        $("#CategoryName").change(function () {
+            setCategory();
+        });
+
+        $("#btnSave").click(function () {
+            $("#BodyContent").val(editor.html());
+            if (!$("form").valid()) {
+                window.parent.messageBox10s('提示', $("#ErrMesList").html());
+                return;
+            }
+            $.ajax({
+                url: "/MyArticle/Create",
+                type: "Post",
+                data: $("form").serialize(),
+                dataType: "json",
+                success: function (data) {
+                    if (data.type == 1) {
+                        window.parent.frameReturnByMes(data.message);
+                        window.parent.frameReturnByReload(true);
+                        window.parent.frameReturnByClose()
+                    }
+                    else {
+                        window.parent.frameReturnByMes(data.message);
+                    }
+                }
+            });
+        });
+        $("#btnReturn").click(function () {
+            window.parent.frameReturnByClose();
+        });
+    });
+</script>
+
+@using (Html.BeginForm())
+{
+    <div id="ErrMesList">
+        <div id="ErrMesListContent">
+            @Html.ValidationSummary(false)
+        </div>
+    </div>
+   
+ <table class="formtable">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.CategoryId)
+                </td>
+                <td>
+                     @Html.DropDownListFor(model => model.CategoryName, ViewBag.Category as SelectList)
+                     <select id="CategoryId" name="CategoryId"></select>
+                </td>
+                <td rowspan="4"><a href="javascript:$('#FileUpload').trigger('click').void(0);;" class="files">@Resource.Browse</a>
+               
+                     @Html.HiddenFor(model => model.ImgUrl)
+               <img class="expic" src="/Content/Images/NotPic.jpg" /><br />
+             <a href="javascript:$('#FileUpload').trigger('click').void(0);" class="files">@Resource.Browse</a>
+             <input type="file"  class="displaynone"  size="10" value="" id="FileUpload" name="FileUpload" onchange="Upload('SingleFile', 'ImgUrl', 'FileUpload','1','1');" />
+             <span class="uploading">@Resource.Uploading</span>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Title)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Title)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Sort)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Sort)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Click)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Click)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    @Html.TextAreaFor(model => model.BodyContent, new { style = "width:675px; height:225px;" })
+                    @Html.HiddenFor(model => model.BodyContent)
+                </td>
+            </tr>
+                   <tr>
+                       <td>
+                           @Html.LabelFor(model => model.CustomLink)：
+                       </td>
+          <td>
+                @Html.EditorFor(model => model.CustomLink)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.IsType)：
+            </td>
+          <td>
+                <select id="IsType" name="IsType">
+                    <option value="0">普通</option>
+                    <option value="1">幻灯片</option>
+                    <option value="2">首页栏目</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        
+}

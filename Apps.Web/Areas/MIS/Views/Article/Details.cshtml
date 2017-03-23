@@ -1,0 +1,11 @@
+﻿@model Apps.Models.MIS.MIS_ArticleModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+}
+
+ 创建人： @Html.DisplayFor(model => model.CreaterName)
+ 创建时间：@Html.DisplayFor(model => model.CreateTime)
+         <br />
+@Html.DisplayFor(model => model.BodyContent)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System.Config>
+  <appSettings>
+    <add key="DataBase" value="Integrated Security=false;Initial Catalog=busflee_dev;Data Source=rdsxxzswbehvlud2prob0.sqlserver.rds.aliyuncs.com,3433;User ID=weidrp;Password=123qwe;Connect Timeout=30" />
+  </appSettings>
+</System.Config>

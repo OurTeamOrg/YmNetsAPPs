@@ -1,0 +1,22 @@
+USE [master]
+GO
+ALTER DATABASE AppsDB SET RECOVERY SIMPLE WITH NO_WAIT
+GO
+ALTER DATABASE AppsDB SET RECOVERY SIMPLE --简单模式
+GO
+USE AppsDB
+GO
+DBCC SHRINKFILE (N'Apps_log' , 11, TRUNCATEONLY) 
+GO
+ --这里的DNName_Log 如果不知道在sys.database_files里是什么名字的话，可以用以下语句进行查询
+USE AppsDB
+GO
+SELECT file_id, name FROM sys.database_files;
+GO
+USE [master]
+GO
+ALTER DATABASE AppsDB SET RECOVERY FULL WITH NO_WAIT
+GO
+ALTER DATABASE AppsDB SET RECOVERY FULL --还原为完全模式
+GO
+

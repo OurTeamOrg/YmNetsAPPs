@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssignRole" xml:space="preserve">
+    <value>分配角色</value>
+    <comment>011</comment>
+  </data>
+  <data name="AssignUser" xml:space="preserve">
+    <value>分配用户</value>
+    <comment>012</comment>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>审核</value>
+    <comment>014</comment>
+  </data>
+  <data name="CheckFail" xml:space="preserve">
+    <value>审核失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="CheckSucceed" xml:space="preserve">
+    <value>审核成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="ChinaCharExpression" xml:space="preserve">
+    <value>{0}只能填写汉字</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="ComparePassword" xml:space="preserve">
+    <value>两次密码不一致</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="ContainExpression" xml:space="preserve">
+    <value>{0}必须包含字符串：{1}</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建</value>
+    <comment>001</comment>
+  </data>
+  <data name="DateExpression" xml:space="preserve">
+    <value>{0}必须是日期格式：2012-10-10</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+    <comment>002</comment>
+  </data>
+  <data name="DeleteFail" xml:space="preserve">
+    <value>删除失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="DeleteSucceed" xml:space="preserve">
+    <value>删除成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>我的桌面</value>
+    <comment>003</comment>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详细</value>
+    <comment>004</comment>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>不可用</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>修改</value>
+    <comment>005</comment>
+  </data>
+  <data name="EditFail" xml:space="preserve">
+    <value>修改失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="EditSucceed" xml:space="preserve">
+    <value>修改成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="EmailExpression" xml:space="preserve">
+    <value>{0}必须是邮箱地址</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>导出</value>
+    <comment>006</comment>
+  </data>
+  <data name="InsertFail" xml:space="preserve">
+    <value>创建失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="InsertSucceed" xml:space="preserve">
+    <value>创建成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="IntRangeExpression" xml:space="preserve">
+    <value>{0}必须在{1}和{2}之间</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsCharExpression" xml:space="preserve">
+    <value>{0}由字母,数字,划线,划线组成</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsDecimalExpression" xml:space="preserve">
+    <value>{0}必须是一个浮点数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsIntegerExpression" xml:space="preserve">
+    <value>{0}必须是一个整数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsNegativeDecimalExpression" xml:space="preserve">
+    <value>{0}必须是一个浮负点数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsNegativeIntegerExpression" xml:space="preserve">
+    <value>{0}必须是一个负整数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsNumberExpression" xml:space="preserve">
+    <value>{0}必须是一个数字</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsPositiveDecimalExpression" xml:space="preserve">
+    <value>{0}必须是一个浮正点数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="IsPositiveIntegerExpression" xml:space="preserve">
+    <value>{0}必须是一个正整数</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="MaxWordsExpression" xml:space="preserve">
+    <value>{0}最多{1}个汉字,{2}个字符</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="MinWordsExpression" xml:space="preserve">
+    <value>{0}最少{1}个字符</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="NotContainExpression" xml:space="preserve">
+    <value>{0}必须不能包含字符串：{1}</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="NotEqualExpression" xml:space="preserve">
+    <value>{0}不能等同于{1}</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="NotNullExpression" xml:space="preserve">
+    <value>{0}必须填写</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="PhoneExpression" xml:space="preserve">
+    <value>{0}不是正确的电话号码,如：0769-2222222</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="PlaseChooseToOperatingRecords" xml:space="preserve">
+    <value>请选择要操作的记录</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="PrimaryRepeat" xml:space="preserve">
+    <value>主键重复</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>查询</value>
+    <comment>007</comment>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>返回</value>
+    <comment>009</comment>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>重设密码</value>
+    <comment>010</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+    <comment>008</comment>
+  </data>
+  <data name="SetFail" xml:space="preserve">
+    <value>设置失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="SetSucceed" xml:space="preserve">
+    <value>设置成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="SiteExpression" xml:space="preserve">
+    <value>{0}必须是网址,如：http://www.abc.com</value>
+    <comment>数据注解验证</comment>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>提示</value>
+    <comment>013</comment>
+  </data>
+  <data name="TitleCreatePerson" xml:space="preserve">
+    <value>创建人</value>
+    <comment>055</comment>
+  </data>
+  <data name="TitleCreateTime" xml:space="preserve">
+    <value>创建时间</value>
+    <comment>052</comment>
+  </data>
+  <data name="TitleEnable" xml:space="preserve">
+    <value>启用</value>
+    <comment>051</comment>
+  </data>
+  <data name="TitleID" xml:space="preserve">
+    <value>ID</value>
+    <comment>057</comment>
+  </data>
+  <data name="TitleName" xml:space="preserve">
+    <value>名称</value>
+    <comment>050</comment>
+  </data>
+  <data name="TitleRemark" xml:space="preserve">
+    <value>说明</value>
+    <comment>056</comment>
+  </data>
+  <data name="TitleSort" xml:space="preserve">
+    <value>排序</value>
+    <comment>053</comment>
+  </data>
+  <data name="TitleState" xml:space="preserve">
+    <value>状态</value>
+    <comment>054</comment>
+  </data>
+  <data name="UnCheck" xml:space="preserve">
+    <value>反审核</value>
+    <comment>015</comment>
+  </data>
+  <data name="UnCheckFail" xml:space="preserve">
+    <value>反审核失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="UnCheckSucceed" xml:space="preserve">
+    <value>反审核成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="UnSelect" xml:space="preserve">
+    <value>反选</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="UpdateFail" xml:space="preserve">
+    <value>更新失败</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="UpdateSucceed" xml:space="preserve">
+    <value>更新成功</value>
+    <comment>Suggestion</comment>
+  </data>
+  <data name="YouWantToDeleteTheSelectedRecords" xml:space="preserve">
+    <value>你要删除所选择的记录吗？</value>
+    <comment>Suggestion</comment>
+  </data>
+</root>
